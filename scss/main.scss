@@ -34,17 +34,19 @@ html{
 		color: $copy-color;
 		height:100%;
 		}
-	}
+}
 
 li{
 	list-style: none;
 
 }
+
 img{
+	@include mq(small){
 	width: 300px;
 	height: 300px;
 	padding-left: 0;
-
+}
 }
 
 #products ul{
@@ -126,17 +128,13 @@ button:nth-of-type(even){
 
 #color button:nth-of-type(2){
 		@include mq(small){
-		
 		background-color: #DC143C;
-
 }
 }
 
 #color button:nth-of-type(4){
 		@include mq(small){
-		
 		background-color: blue;
-
 }
 }
 
@@ -145,10 +143,6 @@ form{
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-
-		
-			
-	
 }
 }
 
@@ -208,6 +202,65 @@ select{
 
 }
 }
+
+#orderSummary ul{
+	padding-left: 0;
+}
+
+#orderSummary li:nth-of-type(1){
+		@include mq(small){
+			display: flex;
+			flex-direction: row;
+		
+}
+
+h3{
+	width: 85%;
+}
+} 
+
+#orderSummary li:nth-of-type(2){
+		@include mq(small){
+			display: flex;
+			flex-direction: row;
+		
+}
+
+h3{
+	width: 85%;
+}
+}
+
+#orderSummary li:nth-of-type(3){
+		@include mq(small){
+			display: flex;
+			flex-direction: row;
+		
+}
+
+h3{
+	width: 85%;
+}
+}
+
+#complete{
+	@include mq(small){
+		font-size: 14px;
+		text-align: center;
+		background-color: green;
+    	width: 80%;
+    	height: 50px;
+    	@include brs(2px,2px,2px,2px);
+    	display: flex;
+    	justify-content: center;
+    	margin-left: 30px;
+    	margin-top: 10px;
+
+	
+}
+}
+
+
 
 
 

@@ -26,15 +26,15 @@ class CheckValidation {
 	
 		const status = this.input.validity
 		
-		if(type == "name" && status.valueMissing){
+		if(status.valueMissing){
 			this.addError('We need this field completed');
 		}
 		
-		if(type == "email" && !this.input.value.match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/)){
+		if(!this.input.value.match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/)){
 			this.addError('Please enter a valid email');
 		}
 		
-		if(type == "zip" && !this.input.value.match(/(^\d{5}$)|(^\d{5}-\d{4}$)/)){
+		if(!this.input.value.match(/(^\d{5}$)|(^\d{5}-\d{4}$)/)){
 			this.addError('Please enter a valid US zipcode');
 		}
 		
@@ -69,7 +69,7 @@ submit.addEventListener("click", (event) => {
 
 	if (errorMessages.length > 0){
 		errorMessages.forEach( (err) => {
-			countryField.insertAdjacentHTML('afterend', '<p class="error">' + err + '</p>')
+			countryField.insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
 		})
 	} else {
 	  alert('Form Submitted');

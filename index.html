@@ -19,24 +19,48 @@
 				</li>
 				<li id="size">
 					<h3>Select a Size</h3>
-					<button type="radio">Small</button>
-					<button type="radio">Medium</button>
-					<button type="radio">Large</button>
+					<label for="sizeChoice1">
+					<input type="radio" id="sizeChoice1"
+					name="shirtSize" value="small">
+					<span>Small</span>
+					</label>
+					<label for="sizeChoice2">
+					<input type="radio" id="sizeChoice2"
+					name="shirtSize" value="medium">
+					<span>Medium</span>
+					</label>
+					<label for="sizeChoice3">
+					<input type="radio" id="sizeChoice3"
+					name="shirtSize" value="large">
+					<span>Large</span>
+					</label>
 				</li>
 				<li id="color">
 					<h3>Select a color</h3>
-					<button type="radio" id="green"></button>
-					<button type="radio" id="red"></button>
-					<button type="radio" id="grey"></button>
-					<button type="radio" id="blue"></button>
+					<label for="colorChoice1">
+					<input type="radio" id="colorChoice1"
+					name="shirtColor" value="green">
+					</label>
+					<label for="colorChoice2">
+					<input type="radio" id="colorChoice2"
+					name="shirtColor" value="red">
+					</label>
+					<label for="colorChoice3">
+					<input type="radio" id="colorChoice3"
+					name="shirtColor" value="grey">
+					</label>
+					<label for="colorChoice4">
+					<input type="radio" id="colorChoice4"
+					name="shirtColor" value="blue">
+					</label>
 				</li>
 			</ul>
 		</section>
 		<section id="orderForm">
 			<h2>Shipping Details</h2>
-			<form action="">
+			<form>
   				<div class="control-group">
-    				<label for="name">Full Name</label>
+    				<label for="fullName">Full Name</label>
     				<input type="text" id="fullName" required/>
   				</div>
   				<div class="control-group">
@@ -48,7 +72,7 @@
     				<input type="text" id="address" required/>
   				</div>
    				<div class="control-group">
-    				<label for="secondAddress">Address 2</label>
+    				<label for="address2">Address 2</label>
     				<input type="text" id="address2"/>
   				</div>
   				<div class="control-group">
@@ -64,8 +88,8 @@
     				<input type="text" id="zip" required/>
   				</div>
   				<div class="control-group">
-    				<label for="country">Country</label>
-    				<input type="hidden" id="country" required/>
+    				<label>Country</label>
+    				<input type="hidden" id="country"/>
     					<select>
 							<option value="AF">Afghanistan</option>
 							<option value="AX">Åland Islands</option>

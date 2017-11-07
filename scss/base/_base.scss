@@ -135,14 +135,20 @@ img{
 }
 }
 
-#size button{
+#size input{
+	visibility:hidden;
+}
+
+#size label{
 	@include mq(small){
+		border: 1px solid;
+		margin: 4px;
 		font-size: 14px;
 		text-align: center;
 		background-color: $secondary-color;
     	width: 30%;
     	height: 30px;
-    	@include brs(2px,2px,2px,2px);
+    	@include brs(4px,4px,4px,4px);
  }
 	 @include mq(medium){
 	 	font-size: 16px;

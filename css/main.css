@@ -121,17 +121,17 @@ li {
   #products p {
     padding-left: 315px; } }
 
-#size input {
+#size label input {
   visibility: hidden; }
 
 @media (min-width: 300px) {
   #size label {
     border: 1px solid;
-    margin: 4px;
+    margin: 5px;
     font-size: 14px;
     text-align: center;
     background-color: #C0C0C0;
-    width: 30%;
+    width: 170px;
     height: 30px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -156,45 +156,43 @@ li {
     font-size: 12px;
     margin-left: 20px; } }
 
-button:first-of-type {
-  margin-right: 5px; }
+#size label input {
+  visibility: hidden; }
 
-button:nth-of-type(even) {
-  margin-right: 5px; }
+#size label span {
+  text-align: center; }
+
+#size input:checked {
+  color: green; }
 
 @media (min-width: 300px) {
-  #color button {
+  #color label {
+    border: 1px solid;
+    margin: 5px;
     width: 22%;
     height: 30px;
     background-color: green; } }
 
 @media (min-width: 400px) {
-  #color button {
+  #color label {
     height: 35px;
     width: 23%; } }
 
 @media (min-width: 700px) {
-  #color button {
+  #color label {
     height: 60px;
     margin-left: 3px; } }
 
 @media (min-width: 1000px) {
-  #color button {
+  #color label {
     width: 20%;
     margin-left: 8px; } }
 
-@media (min-width: 300px) {
-  #color button:nth-of-type(3) {
-    margin-right: 5px;
-    background-color: #2F4F4F; } }
+#color input:checked {
+  color: red; }
 
-@media (min-width: 300px) {
-  #color button:nth-of-type(2) {
-    background-color: #DC143C; } }
-
-@media (min-width: 300px) {
-  #color button:nth-of-type(4) {
-    background-color: blue; } }
+#color label input {
+  visibility: hidden; }
 
 @media (min-width: 300px) {
   form {

@@ -69,7 +69,7 @@ submit.addEventListener("click", (event) => {
 
 	if (errorMessages.length > 0){
 		errorMessages.forEach( (err) => {
-			countryField.insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+			countryField.insertAdjacentHTML('afterend', '<p class="error" id="errors ">' + err + '</p>')
 		})
 	} else {
 	  alert('Form Submitted');

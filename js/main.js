@@ -9,6 +9,21 @@ const stateField = document.querySelector('#state')
 const zipField = document.querySelector('#zip')
 const countryField = document.querySelector('#country')
 
+function shipInfoName(){
+	document.querySelector('#shipName').innerHTML = document.querySelector('#fullName').value;
+}
+
+function shipInfoAddress(){
+	document.querySelector('#shipAddress').innerHTML = document.querySelector('#address').value;
+}
+
+function shipInfoCity(){
+	document.querySelector('#shipCity').innerHTML = document.querySelector('#city').value;
+}
+
+
+
+
 //create a checkValidation class
 
 class CheckValidation {

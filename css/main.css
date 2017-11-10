@@ -131,11 +131,10 @@ li {
 
 @media (min-width: 300px) {
   #size label {
-    border: 0.08333rem solid;
     display: inline-block;
     margin: .4167rem;
     padding-top: 4px;
-    font-size: 14px;
+    font-size: 1.167em;
     text-align: center;
     background-color: #C0C0C0;
     width: 28%;
@@ -147,14 +146,14 @@ li {
 
 @media (min-width: 400px) {
   #size label {
-    font-size: 16px;
+    font-size: 1.231em;
     height: 2.5rem;
     margin: 0.4167rem;
     width: 29%; } }
 
 @media (min-width: 700px) {
   #size label {
-    font-size: 28px;
+    font-size: .933em;
     height: 2rem;
     margin-left: 1rem;
     width: 28%;
@@ -163,7 +162,7 @@ li {
 @media (min-width: 1000px) {
   #size label {
     width: 26%;
-    font-size: 25px;
+    font-size: .833em;
     margin-left: 8px;
     padding-top: 6px; } }
 
@@ -179,7 +178,6 @@ li {
 
 @media (min-width: 300px) {
   #color label {
-    border: 0.08333rem solid;
     display: inline-block;
     margin: 5px;
     width: 20%;
@@ -307,6 +305,7 @@ li {
 
 @media (min-width: 1000px) {
   #address {
+    height: 50px;
     display: flex;
     width: 120px;
     margin-left: 10px;
@@ -333,6 +332,7 @@ li {
   #address2 {
     display: flex;
     width: 120px;
+    height: 50px;
     margin-right: 5px; } }
 
 @media (min-width: 300px) {
@@ -361,7 +361,8 @@ li {
     display: flex;
     width: 80px;
     margin-right: 50px;
-    margin-left: 10px; } }
+    margin-left: 10px;
+    height: 50px; } }
 
 @media (min-width: 300px) {
   #state {
@@ -386,7 +387,8 @@ li {
   #state {
     display: flex;
     width: 80px;
-    margin-right: 50px; } }
+    margin-right: 50px;
+    height: 50px; } }
 
 @media (min-width: 300px) {
   #zip {
@@ -408,7 +410,8 @@ li {
   #zip {
     display: flex;
     width: 80px;
-    margin-right: 5px; } }
+    margin-right: 5px;
+    height: 50px; } }
 
 @media (min-width: 300px) {
   select {
@@ -471,19 +474,22 @@ li {
 
 @media (min-width: 400px) {
   #orderSummary p {
-    font-size: 17px; } }
+    font-size: 1.308em; } }
 
 @media (min-width: 700px) {
   #orderSummary p {
-    font-size: 25px; } }
+    font-size: .833em; } }
 
 @media (min-width: 1000px) {
   #orderSummary p {
-    font-size: 30px; } }
+    font-size: 1em; } }
+
+#orderSummary li:nth-of-type(2) {
+  color: grey; }
 
 @media (min-width: 300px) {
   #complete {
-    font-size: 14px;
+    font-size: 1.167em;
     text-align: center;
     background-color: green;
     width: 80%;
@@ -499,11 +505,11 @@ li {
 
 @media (min-width: 400px) {
   #complete {
-    font-size: 20px; } }
+    font-size: 1.538em; } }
 
 @media (min-width: 700px) {
   #complete {
-    font-size: 30px;
+    font-size: 1em;
     height: 60px;
     margin-left: 70px; } }
 
@@ -511,4 +517,5 @@ li {
   #complete {
     height: 2.5rem;
     align-items: flex-end;
-    margin-left: 30px; } }
+    margin-left: 30px;
+    margin-top: 7rem; } }

@@ -2,21 +2,17 @@ html{
 	@include mq(small){
 		background-color: $neutral-color;
 		font-family: $font-stack;
-		font-size: 12px;
-		line-height:1.5;
+		font-size: .750em;
+		line-height: 1.5;
 		color: $copy-color;
 		height:100%;
 		}
 	@include mq(medium){
-		font-size: 13px;
+		font-size: .813em;
 }
 	@include mq(large){
-		font-size: 30px;
+		font-size: 1.875em;
 }
-	@media(min-width: 1000px){
-		font-size: 30px;
-	}
-
 } 
 
 body{
@@ -37,25 +33,25 @@ li{
 
 img{
 	@include mq(small){
-	width: 300px;
-	height: 300px;
-	padding-left: 0;
+		width: 25rem;
+		height: 25rem;
+		padding-left: 0;
 }
 	@include mq(medium){
-	width: 400px;
-	height: 400px;
+		width: 31.5rem;
+		height: 31.5rem;
 	
 }
 	@include mq(large){
-		width: 700px;
-		height: 700px;
+		width: 25rem;
+		height: 25rem;
 		display: flex;
 		justify-content: center;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	@media(min-width: 1000px){
-		width: 400px;
+		width: 12rem;
 		height: 20%;
 		padding-left: 0;
 		justify-content: flex-start;
@@ -63,6 +59,12 @@ img{
 		
 	
 	}
+}
+#products{
+	@media(min-width: 1000px){
+		width: 40%;
+	}
+
 }
 
 #products ul{
@@ -77,7 +79,8 @@ img{
 		flex-direction: column;
 }
 	@media(min-width: 1000px){
-		margin-right: 10px;
+		margin-right: 0.8333rem;
+		
 	}
 }
 
@@ -90,14 +93,16 @@ img{
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 15px;
+		margin-bottom: 1.25rem;
 }
 	@include mq(large){
-		margin-bottom: 25px;
+		margin-bottom: 2.083rem;
 	}
 	
 	@media(min-width: 1000px){
 		margin-bottom: 0;
+		width: 40%;
+		
 	}
 	
 	
@@ -113,25 +118,30 @@ img{
 		display: flex;
 		flex-direction: column;
 }
+	@media(min-width: 1000px){
+		width: 40%;
+	}
+
+
 }
 
 #products p{
 		@include mq(small){
-			padding-left: 250px;
+			padding-left: 20.83rem;
 
 }
 		@include mq(medium){
-			padding-left: 340px;
+			padding-left: 27rem;
 			font-size: 17px;
 
 }
 		@include mq(large){
-			padding-left: 620px;
+			padding-left: 21rem;
 			font-size: 35px;
 
 }
 		@media(min-width: 1000px){
-			padding-left: 315px;
+			padding-left: 9rem;
 }
 }
 
@@ -141,72 +151,95 @@ img{
 
 #size label{
 	@include mq(small){
-		border: 1px solid;
-		margin: 5px;
+		border: 0.08333rem solid;
+		display: inline-block;
+		margin: .4167rem;
+		padding-top: 4px;
 		font-size: 14px;
 		text-align: center;
 		background-color: $secondary-color;
-    	width: 170px;
-    	height: 30px;
+    	width: 28%;
+    	height: 2.5rem;
     	@include brs(4px,4px,4px,4px);
  }
 	 @include mq(medium){
 	 	font-size: 16px;
-	 	height: 35px;
-    	margin-left: 5px;
+	 	height: 2.5rem;
+    	margin: 0.4167rem;
+    	width: 29%;
 	 }
 	  @include mq(large){
 	  	font-size: 28px;
-	 	height: 60px; 
-    	margin-left: 12px;
+	 	height: 2rem; 
+    	margin-left: 1rem;
+    	width: 28%;
+    	margin: 10px;
 	 }
 	 @media(min-width: 1000px){
-	 	width: 25%;
-	 	font-size: 12px;
-	 	margin-left: 20px;
+	 	width: 26%;
+	 	font-size: 25px;
+	 	margin-left: 8px;
+	 	padding-top: 6px;
 	 }
 	 } 
 
 #size label input {
-	visibility:hidden;
+	display: none;
+	margin: 10px;
 }	 
 
 #size label span{
 	text-align: center;
 }
 
-#size input:checked{
-	color: green;
+#size input:checked + label{
+	border-color: green;
 }
 
 #color label{
 	@include mq(small){
-		border: 1px solid;
+		border: 0.08333rem solid;
+		display: inline-block;
 		margin: 5px;
-		width: 22%;
+		width: 20%;
     	height: 30px;
     	background-color: green;
 }
 	@include mq(medium){
-		height: 35px;
-		width: 23%;
+		height: 2.917rem;
+		width: 19%;
+		margin-left: 1rem;
+		
 }
 	@include mq(large){
-		height: 60px;
-		margin-left: 3px;
+		height: 2rem;
+		margin-left: .65rem;
 }
 	@media(min-width: 1000px){
-		width: 20%;
-		margin-left: 8px;
+		width: 18%;
+		margin-left: 10px;
 	}
 }
 
-#color input:checked{
-	color: red;
+#color input:checked +label{
+	border-color: red;
 }
 
 #color label input {
 	visibility:hidden;
+	width: 3rem;
+}
+
+#color label:nth-child(3){
+	background-color: #DC143C;
+}
+
+#color label:nth-child(4){
+	background-color: #2F4F4F;
+}
+
+#color label:nth-child(5){
+	background-color: blue;
 }
 
 
@@ -221,7 +254,7 @@ form{
 
 #fullName{
 	@include mq(small){
-		width:  85px; 
+		width:  7.083rem; 
 		margin-right: 5px;
 		margin-bottom: 10px;
 		
@@ -231,8 +264,12 @@ form{
 		margin-right: 40px;
 		margin-bottom: 15px;
 }
+	@media(min-width: 550px){
+		width: 190px;
+	
+	}
 	@include mq(large){
-		width: 230px;
+		width: 200px;
 		height: 30px;
 		margin-bottom: 20px;
 }
@@ -256,8 +293,11 @@ form{
 	@include mq(medium){
 		width: 120px; 
 }
+	@media(min-width: 550px){
+		width: 190px;
+}
 	@include mq(large){
-		width: 230px;
+		width: 200px;
 		height: 30px;
 }
 	@media(min-width: 1000px){
@@ -285,8 +325,11 @@ form{
 		margin-bottom: 15px;
 		
 }
+	@media(min-width: 550px){
+		width: 180px;
+}
 	@include mq(large){
-		width: 210px; 
+		width: 200px; 
 		height: 30px;
 		margin-bottom: 20px;
 }
@@ -306,8 +349,11 @@ form{
 	@include mq(medium){
 		width: 120px;  
 }
+	@media(min-width: 550px){
+		width: 180px;
+}
 	@include mq(large){
-		width: 210px; 
+		width: 200px; 
 		height: 30px;
 		
 }
@@ -330,8 +376,11 @@ form{
 		 width: 95px; 
 		
 } 
+	@media(min-width: 550px){
+		width: 120px;
+}
 	@include mq(large){
-		 width: 150px;
+		 width: 120px;
 		 height: 30px; 
 		 margin-right: 35px;
 		 margin-bottom: 20px;
@@ -354,8 +403,12 @@ form{
 		@include mq(medium){
 		 width: 95px; 
 } 
+	@media(min-width: 550px){
+		width: 120px;
+}
+	
 	@include mq(large){
-		 width: 150px;
+		 width: 120px;
 		 height: 30px;
 		 margin-right: 35px;
 } 
@@ -374,8 +427,10 @@ form{
 	@include mq(medium){
 		 width: 95px; 
 } 
+	@media(min-width: 550px){
+		width: 120px;
+}
 	@include mq(large){
-		 width: 150px;
 		 height: 30px; 
 		
 } 
@@ -509,8 +564,11 @@ h3{
 		 
 }
 	@media(min-width: 1000px){
+		height: 2.5rem;
 		align-items: flex-end;
 		margin-left: 30px;
 	}
+
+	
 }
 

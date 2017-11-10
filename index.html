@@ -21,7 +21,7 @@
 					<h3>Select a Size</h3>
 					<label for="sizeChoice1">
 					<input type="radio" id="sizeChoice1"
-					name="shirtSize" value="small">
+					name="shirtSize" value="small" checked>
 					<span>Small</span>
 					</label>
 					<label for="sizeChoice2">
@@ -81,7 +81,7 @@
   				</div>
   				<div class="control-group">
     				<label for="state">State</label>
-    				<input type="text" id="state" required/>
+    				<input type="text" id="state" onInput="shipInfoState()" required/>
   				</div>
   				<div class="control-group">
     				<label for="zip">Zip</label>

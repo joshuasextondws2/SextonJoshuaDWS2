@@ -18,9 +18,12 @@ function shipInfoAddress(){
 }
 
 function shipInfoCity(){
-	document.querySelector('#shipCity').innerHTML = document.querySelector('#city').value;
+	document.querySelector('#shipCity').innerHTML = document.querySelector('#city').value +",";
 }
 
+function shipInfoState(){
+	document.querySelector('#shipCity').insertAdjacentHTML('beforeend', document.querySelector('#state').value);
+}
 
 
 

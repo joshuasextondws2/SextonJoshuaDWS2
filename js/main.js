@@ -18,7 +18,7 @@ function shipInfoAddress(){
 }
 
 function shipInfoCity(){
-	document.querySelector('#shipCity').innerHTML = document.querySelector('#city').value;
+	document.querySelector('#shipCity').innerHTML = document.querySelector('#city').value + ",";
 }
 
 function shipInfoState(){
@@ -46,10 +46,22 @@ class CheckValidation {
 	getMessage(){
 	
 		const status = this.input.validity
-		const type = this.type.validity
+		const type = this.type
 		
 		if(type === "name" && status.valueMissing){
-			this.addError('We need this field completed');
+			this.addError('We need your name here');
+		}
+		
+		if(type === "address" && status.valueMissing){
+			this.addError('We need your address please');
+		}
+		
+		if(type === "city" && status.valueMissing){
+			this.addError('Please give us a city for shipping');
+		}
+		
+		if(type === "state" && status.valueMissing){
+			this.addError('You forgot to add a state');
 		}
 		
 		if(type === "email" && !this.input.value.match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/)){
@@ -72,12 +84,14 @@ submit.addEventListener("click", (event) => {
 	event.preventDefault(); //this will stop standard form validation
 		
 	
+	
 	let validateEmail = new CheckValidation(emailField, "email");
 	let errorMessages = validateEmail.getMessage();
+	
 	let validateName = new CheckValidation(nameField, "name");
 	
 	let validateAddress = new CheckValidation(addressField, "address");
-	
+		
 	let validateCity = new CheckValidation(cityField, "city");
 	
 	let validateState = new CheckValidation(stateField, "state");
@@ -87,8 +101,6 @@ submit.addEventListener("click", (event) => {
 	let validateCountry = new CheckValidation(countryField, "country");
 	
 	
-	
-
 	if (errorMessages.length > 0){
 		errorMessages.forEach( (err) => {
 			countryField.insertAdjacentHTML('afterend', '<p class="error" id="errors ">' + err + '</p>')

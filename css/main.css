@@ -510,6 +510,9 @@ li {
 #orderSummary li:nth-of-type(2) {
   color: grey; }
 
+#shipCity, #shipState, #shipZip {
+  display: inline; }
+
 @media (min-width: 300px) {
   #complete {
     font-size: 1.167em;

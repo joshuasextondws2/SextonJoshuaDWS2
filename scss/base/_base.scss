@@ -577,7 +577,9 @@ h3{
 	color: grey;
 }
 
-
+#shipCity, #shipState, #shipZip{
+	display: inline;
+} 
 
 #complete{
 	@include mq(small){

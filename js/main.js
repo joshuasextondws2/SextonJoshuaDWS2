@@ -18,11 +18,14 @@ function shipInfoAddress(){
 }
 
 function shipInfoCity(){
-	document.querySelector('#shipCity').innerHTML = document.querySelector('#city').value +",";
+	document.querySelector('#shipCity').innerHTML = document.querySelector('#city').value;
 }
 
 function shipInfoState(){
-	document.querySelector('#shipCity').insertAdjacentHTML('beforeend', document.querySelector('#state').value);
+	document.querySelector('#shipState').innerHTML = document.querySelector('#state').value;
+}
+function shipInfoZip(){
+	document.querySelector('#shipZip').innerHTML = document.querySelector('#zip').value;
 }
 
 
@@ -43,16 +46,17 @@ class CheckValidation {
 	getMessage(){
 	
 		const status = this.input.validity
+		const type = this.type.validity
 		
-		if(status.valueMissing){
+		if(type === "name" && status.valueMissing){
 			this.addError('We need this field completed');
 		}
 		
-		if(!this.input.value.match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/)){
+		if(type === "email" && !this.input.value.match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/)){
 			this.addError('Please enter a valid email');
 		}
 		
-		if(!this.input.value.match(/(^\d{5}$)|(^\d{5}-\d{4}$)/)){
+		if(type ==="zip" && !this.input.value.match(/(^\d{5}$)|(^\d{5}-\d{4}$)/)){
 			this.addError('Please enter a valid US zipcode');
 		}
 		

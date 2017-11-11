@@ -19,40 +19,30 @@
 				</li>
 				<li id="size">
 					<h3>Select a Size</h3>
-					<label for="sizeChoice1">
-					<input type="radio" id="sizeChoice1"
-					name="shirtSize" value="small" checked>
-					<span>Small</span>
-					</label>
-					<label for="sizeChoice2">
-					<input type="radio" id="sizeChoice2"
+					<input class="sizeChoice1" type="radio" id="sizeChoice1"
+					name="shirtSize" value="small">
+					<label for="sizeChoice1">Small</label>
+					<input class="sizeChoice2" type="radio" id="sizeChoice2"
 					name="shirtSize" value="medium">
-					<span>Medium</span>
-					</label>
-					<label for="sizeChoice3">
-					<input type="radio" id="sizeChoice3"
+					<label for="sizeChoice2">Medium</label>
+					<input class="sizeChoice3" type="radio" id="sizeChoice3"
 					name="shirtSize" value="large">
-					<span>Large</span>
-					</label>
+					<label for="sizeChoice3">Large</label>
 				</li>
 				<li id="color">
 					<h3>Select a color</h3>
-					<label for="colorChoice1">
-					<input type="radio" id="colorChoice1"
+					<input class="colorChoice1" type="radio" id="colorChoice1"
 					name="shirtColor" value="green">
-					</label>
-					<label for="colorChoice2">
-					<input type="radio" id="colorChoice2"
+					<label for="colorChoice1"></label>
+					<input class="colorChoice2" type="radio" id="colorChoice2"
 					name="shirtColor" value="red">
-					</label>
-					<label for="colorChoice3">
-					<input type="radio" id="colorChoice3"
+					<label for="colorChoice2"></label>
+					<input class="colorChoice3" type="radio" id="colorChoice3"
 					name="shirtColor" value="grey">
-					</label>
-					<label for="colorChoice4">
-					<input type="radio" id="colorChoice4"
+					<label for="colorChoice3"></label>
+					<input class="colorChoice4" type="radio" id="colorChoice4"
 					name="shirtColor" value="blue">
-					</label>
+					<label for="colorChoice4"></label>
 				</li>
 			</ul>
 		</section>
@@ -85,7 +75,7 @@
   				</div>
   				<div class="control-group">
     				<label for="zip">Zip</label>
-    				<input type="text" id="zip" required/>
+    				<input type="text" id="zip" onInput="shipInfoZip()" required/>
   				</div>
   				<div class="control-group">
     				<label>Country</label>
@@ -365,6 +355,9 @@
 					<p id="shipName"></p>
 					<p id="shipAddress"></p>
 					<p id="shipCity"></p>
+					<p id="shipState"></p>
+					<p id="shipZip"></p>
+
 				</li>
 			
 			</ul>

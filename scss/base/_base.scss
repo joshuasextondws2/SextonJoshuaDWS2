@@ -146,13 +146,12 @@ img{
 }
 }
 
-#size label input {
+#size input {
 	visibility:hidden;
 }
 
 #size label{
 	@include mq(small){
-		
 		display: inline-block;
 		margin: .4167rem;
 		padding-top: 4px;
@@ -162,6 +161,7 @@ img{
     	width: 28%;
     	height: 2.5rem;
     	@include brs(4px,4px,4px,4px);
+    	cursor: pointer;
  }
 	 @include mq(medium){
 	 	font-size: 1.231em;
@@ -184,7 +184,7 @@ img{
 	 }
 	 } 
 
-#size label input {
+#size input {
 	display: none;
 	margin: 10px;
 }	 
@@ -193,7 +193,18 @@ img{
 	text-align: center;
 }
 
-#size input:checked + label{
+.sizeChoice1:checked +label{
+	border: solid;
+	border-color: green;
+}
+
+.sizeChoice2:checked +label{
+	border: solid;
+	border-color: green;
+}
+
+.sizeChoice3:checked +label{
+	border: solid;
 	border-color: green;
 }
 
@@ -221,24 +232,44 @@ img{
 	}
 }
 
-#color input:checked +label{
-	border-color: red;
+.colorChoice1:checked +label{
+	border: solid;
+	border-color: yellow;
+	
 }
 
-#color label input {
-	visibility:hidden;
+.colorChoice2:checked +label{
+	border: solid;
+	border-color: yellow;
+	
+}
+
+.colorChoice3:checked +label{
+	border: solid;
+	border-color: yellow;
+	
+}
+
+.colorChoice4:checked +label{
+	border: solid;
+	border-color: yellow;
+	
+}
+
+#color input {
+	display: none;
 	width: 3rem;
 }
 
-#color label:nth-child(3){
+#colorChoice2 +label{
 	background-color: #DC143C;
 }
 
-#color label:nth-child(4){
+#colorChoice3 +label{
 	background-color: #2F4F4F;
 }
 
-#color label:nth-child(5){
+#colorChoice4 +label{
 	background-color: blue;
 }
 
@@ -545,6 +576,7 @@ h3{
 #orderSummary li:nth-of-type(2){
 	color: grey;
 }
+
 
 
 #complete{

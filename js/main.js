@@ -1,7 +1,7 @@
 //cache of inputs
 
 const submit = document.querySelector('#complete')
-const nameField = document.querySelector('#name')
+const nameField = document.querySelector('#fullName')
 const emailField = document.querySelector('#email')
 const addressField = document.querySelector('#address')
 const cityField = document.querySelector('#city')
@@ -82,7 +82,12 @@ class CheckValidation {
 
 submit.addEventListener("click", (event) => {
 	event.preventDefault(); //this will stop standard form validation
-		
+	//	var errorNodes = document.getElementById('#errors');
+//		if(errorNodes){
+//		while (errorNodes.hasChildNodes()) {
+  //  			errorNode.removeChild(errorNode.firstChild);
+//}
+	//	}
 	let validateEmail = new CheckValidation(emailField, "email");
 	let errorMessages1 = validateEmail.getMessage();
 	
@@ -104,7 +109,7 @@ submit.addEventListener("click", (event) => {
 	let validateCountry = new CheckValidation(countryField, "country");
 	
 	
-	if (errorMessages.length > 0){
+	if (errorMessages.length > 0 & errorMessages1.length > 0 && errorMessages2.length >0 && errorMessages3.length >0 && errorMessages4.length >0 && errorMessages5.length >0){
 		errorMessages.forEach( (err) => {
 			document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
 		})

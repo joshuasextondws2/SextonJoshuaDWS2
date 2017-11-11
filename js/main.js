@@ -89,7 +89,9 @@ submit.addEventListener("click", (event) => {
 	let errorMessages = validateEmail.getMessage();
 	
 	let validateName = new CheckValidation(nameField, "name");
-	
+	let errorMessages2 = validateName.getMessage();
+
+
 	let validateAddress = new CheckValidation(addressField, "address");
 		
 	let validateCity = new CheckValidation(cityField, "city");
@@ -101,9 +103,9 @@ submit.addEventListener("click", (event) => {
 	let validateCountry = new CheckValidation(countryField, "country");
 	
 	
-	if (errorMessages.length > 0){
+	if (errorMessages.length > 0 && errorMessages2.length > 0){
 		errorMessages.forEach( (err) => {
-			countryField.insertAdjacentHTML('afterend', '<p class="error" id="errors ">' + err + '</p>')
+			document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
 		})
 	} else {
 	  alert('Form Submitted');

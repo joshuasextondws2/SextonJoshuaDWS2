@@ -83,19 +83,16 @@ class CheckValidation {
 submit.addEventListener("click", (event) => {
 	event.preventDefault(); //this will stop standard form validation
 		
-	
-	
 	let validateEmail = new CheckValidation(emailField, "email");
-	let errorMessages = validateEmail.getMessage();
+	let errorMessages1 = validateEmail.getMessage();
 	
 	let validateName = new CheckValidation(nameField, "name");
-	let errorMessages2 = validateName.getMessage();
-
 
 	let validateAddress = new CheckValidation(addressField, "address");
-		
+	let errorMessages = validateAddress.getMessage();
 	let validateCity = new CheckValidation(cityField, "city");
-	
+	let errorMessages2 = validateCity.getMessage();
+
 	let validateState = new CheckValidation(stateField, "state");
 	
 	let validateZip = new CheckValidation(zipField, "zip");
@@ -103,14 +100,23 @@ submit.addEventListener("click", (event) => {
 	let validateCountry = new CheckValidation(countryField, "country");
 	
 	
-	if (errorMessages.length > 0 && errorMessages2.length > 0){
+	if (errorMessages.length > 0 && errorMessages1.length > 0){
 		errorMessages.forEach( (err) => {
 			document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+		})
+		errorMessages1.forEach((err)=>{
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+
+		})
+		errorMessages2.forEach((err)=>{
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+
 		})
 	} else {
 	  alert('Form Submitted');
 		}
 	})
+	
 
 
 

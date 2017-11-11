@@ -87,20 +87,24 @@ submit.addEventListener("click", (event) => {
 	let errorMessages1 = validateEmail.getMessage();
 	
 	let validateName = new CheckValidation(nameField, "name");
+	let errorMessages5 = validateName.getMessage();
 
 	let validateAddress = new CheckValidation(addressField, "address");
 	let errorMessages = validateAddress.getMessage();
+	
 	let validateCity = new CheckValidation(cityField, "city");
 	let errorMessages2 = validateCity.getMessage();
 
 	let validateState = new CheckValidation(stateField, "state");
-	
+	let errorMessages3 = validateState.getMessage();
+
 	let validateZip = new CheckValidation(zipField, "zip");
-	
+	let errorMessages4 = validateZip.getMessage();
+
 	let validateCountry = new CheckValidation(countryField, "country");
 	
 	
-	if (errorMessages.length > 0 && errorMessages1.length > 0){
+	if (errorMessages.length > 0){
 		errorMessages.forEach( (err) => {
 			document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
 		})
@@ -109,6 +113,18 @@ submit.addEventListener("click", (event) => {
 
 		})
 		errorMessages2.forEach((err)=>{
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+
+		})
+		errorMessages3.forEach((err)=>{
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+
+		})
+		errorMessages4.forEach((err)=>{
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+
+		})
+		errorMessages5.forEach((err)=>{
 		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
 
 		})

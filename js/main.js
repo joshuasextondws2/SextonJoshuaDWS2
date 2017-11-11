@@ -71,6 +71,11 @@ class CheckValidation {
 		if(type ==="zip" && !this.input.value.match(/(^\d{5}$)|(^\d{5}-\d{4}$)/)){
 			this.addError('Please enter a valid US zipcode');
 		}
+		const countryField = document.querySelector('#countrySelection')
+		var selectedValue = countryField.options[countryField.selectedIndex].value;
+		if(type === "country" && selectedValue=="se"){
+			this.addError('Please select a country');
+		}
 		
 		return this.errors
 	}
@@ -82,12 +87,13 @@ class CheckValidation {
 
 submit.addEventListener("click", (event) => {
 	event.preventDefault(); //this will stop standard form validation
-	//	var errorNodes = document.getElementById('#errors');
-//		if(errorNodes){
-//		while (errorNodes.hasChildNodes()) {
-  //  			errorNode.removeChild(errorNode.firstChild);
-//}
-	//	}
+		var element = document.querySelector('#errors');	
+		if(element){	
+			element.outerHTML = "";
+       		delete element;
+       		}
+	
+		
 	let validateEmail = new CheckValidation(emailField, "email");
 	let errorMessages1 = validateEmail.getMessage();
 	
@@ -107,33 +113,45 @@ submit.addEventListener("click", (event) => {
 	let errorMessages4 = validateZip.getMessage();
 
 	let validateCountry = new CheckValidation(countryField, "country");
+		let errorMessages6 = validateCountry.getMessage();
+
 	
-	
-	if (errorMessages.length > 0 & errorMessages1.length > 0 && errorMessages2.length >0 && errorMessages3.length >0 && errorMessages4.length >0 && errorMessages5.length >0){
+	if (errorMessages.length > 0 ){
 		errorMessages.forEach( (err) => {
 			document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
 		})
+		}
+	else if(errorMessages1.length > 0){
 		errorMessages1.forEach((err)=>{
 		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
-
-		})
+    	})
+    	}
+	else if(errorMessages2.length >0){
 		errorMessages2.forEach((err)=>{
 		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
-
 		})
+		}
+	else if(errorMessages3.length >0) {
 		errorMessages3.forEach((err)=>{
 		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
-
 		})
+		}
+	else if(errorMessages4.length >0){
 		errorMessages4.forEach((err)=>{
 		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
-
 		})
+		}
+	else if(errorMessages5.length >0){
 		errorMessages5.forEach((err)=>{
 		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+})
+}
+	else if(errorMessages6.length >0){
+		errorMessages6.forEach((err)=>{
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+})
 
-		})
-	} else {
+} else {
 	  alert('Form Submitted');
 		}
 	})

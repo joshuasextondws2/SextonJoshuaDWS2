@@ -8,6 +8,10 @@ const cityField = document.querySelector('#city')
 const stateField = document.querySelector('#state')
 const zipField = document.querySelector('#zip')
 const countryField = document.querySelector('#country')
+const radioSize = document.querySelector('#sizeChoice1')
+
+
+const radioColor = document.querySelector('input[name=shirtColor]')
 
 function shipInfoName(){
 	document.querySelector('#shipName').innerHTML = document.querySelector('#fullName').value;
@@ -76,6 +80,14 @@ class CheckValidation {
 		if(type === "country" && selectedValue=="se"){
 			this.addError('Please select a country');
 		}
+		var sizeValue = radioSize.checked;
+		if(type === "size" && sizeValue==false){
+		this.addError('Please select a shirt size');
+		}
+		var colorValue = radioColor.checked;
+		if(type === "color" && colorValue==false){
+		this.addError('Please select a shirt color');
+		}
 		
 		return this.errors
 	}
@@ -93,8 +105,9 @@ submit.addEventListener("click", (event) => {
 		var element4 = document.querySelector('#errorName');	
 		var element5 = document.querySelector('#errorZip');	
 		var element6 = document.querySelector('#errorCountry');	
-		var element7 = document.querySelector('#errorEmail');	
-
+		var element7 = document.querySelector('#errorSize');	
+		var element8 = document.querySelector('#errorColor');	
+		var element9 = document.querySelector('#errorEmail');	
 			
 
 		if(element1){
@@ -125,6 +138,16 @@ submit.addEventListener("click", (event) => {
 			element7.innerHTML = "";
        		delete element7;
        		}	
+       	if(element8){
+			element8.innerHTML = "";
+       		delete element8;
+       		}
+       	if(element9){
+			element9.innerHTML = "";
+       		delete element9;
+       		}
+       			
+       
 		
 		var conditional= false;
 	let validateEmail = new CheckValidation(emailField, "email");
@@ -147,6 +170,12 @@ submit.addEventListener("click", (event) => {
 
 	let validateCountry = new CheckValidation(countryField, "country");
 		let errorMessages6 = validateCountry.getMessage();
+		
+	let validateSize = new CheckValidation(radioSize, "size");
+		let errorMessages7 = validateSize.getMessage();
+	
+	 let validateColor = new CheckValidation(radioColor, "color");
+		let errorMessages8 = validateColor.getMessage();	
 
 	
 	if (errorMessages.length > 0 ){
@@ -185,6 +214,20 @@ submit.addEventListener("click", (event) => {
 	if(errorMessages5.length >0){
 		errorMessages5.forEach((err)=>{
 		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errorName">' + err + '</p>')
+		conditional=true;
+
+})
+}
+	if(errorMessages7.length >0){
+		errorMessages7.forEach((err)=>{
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errorSize">' + err + '</p>')
+		conditional=true;
+
+})
+}
+	if(errorMessages8.length >0){
+		errorMessages8.forEach((err)=>{
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errorColor">' + err + '</p>')
 		conditional=true;
 
 })

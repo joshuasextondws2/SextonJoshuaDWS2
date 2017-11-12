@@ -28,18 +28,18 @@ li {
   list-style: none; }
 
 @media (min-width: 300px) {
-  img {
+  body img {
     width: 25rem;
     height: 25rem;
     padding-left: 0; } }
 
 @media (min-width: 400px) {
-  img {
+  body img {
     width: 31.5rem;
     height: 31.5rem; } }
 
 @media (min-width: 700px) {
-  img {
+  body img {
     width: 25rem;
     height: 25rem;
     display: flex;
@@ -48,7 +48,7 @@ li {
     margin-right: auto; } }
 
 @media (min-width: 1000px) {
-  img {
+  body img {
     width: 12rem;
     height: 20%;
     padding-left: 0;
@@ -547,3 +547,67 @@ li {
 
 .error {
   color: red; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */ }
+
+.modal-content li:nth-of-type(2) {
+  display: flex;
+  flex-direction: row; }
+
+.modal-content li:nth-of-type(1) {
+  display: flex;
+  flex-direction: row; }
+
+.modal-content li:nth-of-type(3) {
+  display: flex;
+  flex-direction: row; }
+
+.modal-content h3 {
+  width: 85%; }
+
+.modal-content img {
+  display: block; }
+  @media (min-width: 300px) {
+    .modal-content img {
+      margin-left: 40px;
+      margin-top: 20px;
+      width: 30%;
+      height: 30%; } }
+  @media (min-width: 700px) {
+    .modal-content img {
+      margin-left: 60px;
+      margin-top: 30px;
+      width: 40%;
+      height: 40%; } }
+
+#modalShipCity, #modalShipState, #modalShipZip {
+  display: inline; }

@@ -8,28 +8,35 @@ const cityField = document.querySelector('#city')
 const stateField = document.querySelector('#state')
 const zipField = document.querySelector('#zip')
 const countryField = document.querySelector('#country')
-const radioSize = document.querySelector('#sizeChoice1')
-
-
+const radioSize = document.querySelector('input[name=shirtSize]')
 const radioColor = document.querySelector('input[name=shirtColor]')
 
 function shipInfoName(){
 	document.querySelector('#shipName').innerHTML = document.querySelector('#fullName').value;
+	document.querySelector('#modalShipName').innerHTML =  document.querySelector('#fullName').value;
 }
 
 function shipInfoAddress(){
 	document.querySelector('#shipAddress').innerHTML = document.querySelector('#address').value;
+	document.querySelector('#modalShipAddress').innerHTML =  document.querySelector('#address').value;
+
 }
 
 function shipInfoCity(){
 	document.querySelector('#shipCity').innerHTML = document.querySelector('#city').value + ",";
+	document.querySelector('#modalShipCity').innerHTML =  document.querySelector('#city').value +",";
+
 }
 
 function shipInfoState(){
 	document.querySelector('#shipState').innerHTML = document.querySelector('#state').value;
+		document.querySelector('#modalShipState').innerHTML =  document.querySelector('#state').value;
+
 }
 function shipInfoZip(){
 	document.querySelector('#shipZip').innerHTML = document.querySelector('#zip').value;
+	document.querySelector('#modalShipZip').innerHTML =  document.querySelector('#zip').value;
+
 }
 
 
@@ -80,12 +87,22 @@ class CheckValidation {
 		if(type === "country" && selectedValue=="se"){
 			this.addError('Please select a country');
 		}
+		var sizeValue1 = document.querySelector("#sizeChoice2");
+		var sizeValue2 = document.querySelector("#sizeChoice3");
 		var sizeValue = radioSize.checked;
-		if(type === "size" && sizeValue==false){
+		var radioSize2 = sizeValue1.checked;
+		var radioSize3 = sizeValue2.checked;
+		if(type === "size" && sizeValue==false && radioSize2 ==false && radioSize3 == false){
 		this.addError('Please select a shirt size');
 		}
+		var colorValue1 = document.querySelector("#colorChoice2");
+		var colorValue2 = document.querySelector("#colorChoice3");
+		var colorValue3 = document.querySelector("#colorChoice4");
 		var colorValue = radioColor.checked;
-		if(type === "color" && colorValue==false){
+		var radioColor2 = colorValue1.checked;
+		var radioColor3 = colorValue2.checked;
+		var radioColor4 = colorValue3.checked;
+		if(type === "color" && colorValue==false && radioColor2==false && radioColor3==false && radioColor4==false){
 		this.addError('Please select a shirt color');
 		}
 		
@@ -240,7 +257,12 @@ submit.addEventListener("click", (event) => {
 })
 
 } if(conditional==false) {
-	  alert('Form Submitted');
+	  var modal = document.getElementById('myModal');
+		modal.style.display = "block";
+		var shipping = document.getElementById("shipInfo");
+		var newImage = document.createElement('img');
+		newImage.src = "images/circle-check.svg"
+		shipping.appendChild(newImage);
 		}
 	})
 	

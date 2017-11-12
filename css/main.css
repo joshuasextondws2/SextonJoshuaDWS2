@@ -545,5 +545,5 @@ li {
     align-items: flex-end;
     margin-left: 30px; } }
 
-#errors {
+.error {
   color: red; }

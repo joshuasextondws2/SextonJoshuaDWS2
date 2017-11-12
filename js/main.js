@@ -49,7 +49,7 @@ class CheckValidation {
 		const type = this.type
 		
 		if(type === "name" && status.valueMissing){
-			this.addError('We need your name here');
+			this.addError('We need your name please');
 		}
 		
 		if(type === "address" && status.valueMissing){
@@ -87,13 +87,46 @@ class CheckValidation {
 
 submit.addEventListener("click", (event) => {
 	event.preventDefault(); //this will stop standard form validation
-		var element = document.querySelector('#errors');	
-		if(element){	
-			element.outerHTML = "";
-       		delete element;
+		var element1 = document.querySelector('#errorAddress');
+		var element2 = document.querySelector('#errorCity');	
+		var element3 = document.querySelector('#errorState');	
+		var element4 = document.querySelector('#errorName');	
+		var element5 = document.querySelector('#errorZip');	
+		var element6 = document.querySelector('#errorCountry');	
+		var element7 = document.querySelector('#errorEmail');	
+
+			
+
+		if(element1){
+			element1.innerHTML = "";
+       		delete element1;
        		}
-	
+       	if(element2){
+			element2.innerHTML = "";
+       		delete element2;
+       		}
+	    if(element3){
+			element3.innerHTML = "";
+       		delete element3;
+       		}
+    	if(element4){
+			element4.innerHTML = "";
+       		delete element4;
+       		}
+       	if(element5){
+			element5.innerHTML = "";
+       		delete element5;
+       		}
+       	if(element6){
+			element6.innerHTML = "";
+       		delete element6;
+       		}	
+       	if(element7){
+			element7.innerHTML = "";
+       		delete element7;
+       		}	
 		
+		var conditional= false;
 	let validateEmail = new CheckValidation(emailField, "email");
 	let errorMessages1 = validateEmail.getMessage();
 	
@@ -118,40 +151,52 @@ submit.addEventListener("click", (event) => {
 	
 	if (errorMessages.length > 0 ){
 		errorMessages.forEach( (err) => {
-			document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+			document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errorAddress">' + err + '</p>')
+			conditional=true;
 		})
 		}
-	else if(errorMessages1.length > 0){
+	if(errorMessages1.length > 0){
 		errorMessages1.forEach((err)=>{
-		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errorEmail">' + err + '</p>')
+		conditional=true;
+
     	})
     	}
-	else if(errorMessages2.length >0){
+	if(errorMessages2.length >0){
 		errorMessages2.forEach((err)=>{
-		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errorCity">' + err + '</p>')
+		conditional=true;
+
 		})
 		}
-	else if(errorMessages3.length >0) {
+	if(errorMessages3.length >0) {
 		errorMessages3.forEach((err)=>{
-		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errorState">' + err + '</p>')
+		conditional=true;
 		})
 		}
-	else if(errorMessages4.length >0){
+	if(errorMessages4.length >0){
 		errorMessages4.forEach((err)=>{
-		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errorZip">' + err + '</p>')
+		conditional=true;
+
 		})
 		}
-	else if(errorMessages5.length >0){
+	if(errorMessages5.length >0){
 		errorMessages5.forEach((err)=>{
-		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errorName">' + err + '</p>')
+		conditional=true;
+
 })
 }
-	else if(errorMessages6.length >0){
+	if(errorMessages6.length >0){
 		errorMessages6.forEach((err)=>{
-		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errors">' + err + '</p>')
+		document.querySelector('#countrySelection').insertAdjacentHTML('afterend', '<p class="error" id="errorCountry">' + err + '</p>')
+		conditional=true;
+
 })
 
-} else {
+} if(conditional==false) {
 	  alert('Form Submitted');
 		}
 	})

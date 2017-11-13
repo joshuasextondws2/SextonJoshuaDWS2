@@ -11,41 +11,39 @@
 	</head>
 	<body>
 		<!-- The Modal -->
-<div id="myModal" class="modal">
+		<section id="myModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
+  			<section class="modal-content">
     	
-    	<h2>Order Completed</h2>
+    			<h2>Order Completed</h2>
     	
-    	<h2>Order Summary</h2>
-			<ul>
-				<li>
-					<h3>Basic Tee</h3>
-					<p>$20.00</p>
-				</li>
-				<li>
-					<h3>Shipping</h3>
-					<p>Free</p>
-				</li>
-				<li>
-					<h3>Total</h3>
-					<p>20.00</p>
-				</li>
-				<li id="shipInfo">
-					<h3>Shipping Address</h3>
-					<p id="modalShipName"></p>
-					<p id="modalShipAddress"></p>
-					<p id="modalShipCity"></p>
-					<p id="modalShipState"></p>
-					<p id="modalShipZip"></p>
+    			<h2>Order Summary</h2>
+				<ul>
+					<li>
+						<h3>Basic Tee</h3>
+						<p>$20.00</p>
+					</li>
+					<li>
+						<h3>Shipping</h3>
+						<p>Free</p>
+					</li>
+					<li>
+						<h3>Total</h3>
+						<p>20.00</p>
+					</li>
+					<li id="shipInfo">
+						<h3>Shipping Address</h3>
+						<p id="modalShipName"></p>
+						<p id="modalShipAddress"></p>
+						<p id="modalShipCity"></p>
+						<p id="modalShipState"></p>
+						<p id="modalShipZip"></p>
+					</li>
+				</ul>
+  		</section>
 
-				</li>
-			
-			</ul>
-  </div>
-
-</div>
+		</section>
 	
 		<section id="products">
 			<h2>Basic Tee</h2>
@@ -115,9 +113,9 @@
     				<input type="text" id="zip" onInput="shipInfoZip()" required/>
   				</div>
   				<div class="control-group">
-    				<label for ="country">Country</label>
     				<input type="hidden" id="country"/>
-    					<select id="countrySelection">
+    				<label for="countryInput">Country</label>
+    					<select id="countryInput" name="country_choice">
     						<option value="se">Please select a country</option>
 							<option value="AF">Afghanistan</option>
 							<option value="AX">Åland Islands</option>
@@ -369,8 +367,7 @@
 							<option value="ZM">Zambia</option>
 							<option value="ZW">Zimbabwe</option>
 					</select>
-	
-  				</div>
+				</div>
 			</form>
 		</section>
 		<section id = "orderSummary">
@@ -395,9 +392,7 @@
 					<p id="shipCity"></p>
 					<p id="shipState"></p>
 					<p id="shipZip"></p>
-
 				</li>
-			
 			</ul>
 			<button type="submit" id='complete'>Complete Order</button>
 		</section>

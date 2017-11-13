@@ -28,7 +28,6 @@ body{
 
 li{
 	list-style: none;
-
 }
 
 body img{
@@ -80,8 +79,7 @@ body img{
 }
 	@media(min-width: 1000px){
 		margin-right: 0.8333rem;
-		
-	}
+		}
 }
 
 #orderForm{
@@ -98,12 +96,10 @@ body img{
 	@include mq(large){
 		margin-bottom: 2.083rem;
 	}
-	
 	@media(min-width: 1000px){
 		margin-bottom: 0;
 		width: 40%;
-		
-	}
+		}
 	
 	
 }
@@ -117,7 +113,6 @@ body img{
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		
 }
 	@media(min-width: 1000px){
 		width: 40%;
@@ -129,17 +124,14 @@ body img{
 #products p{
 		@include mq(small){
 			padding-left: 20.83rem;
-
 }
 		@include mq(medium){
 			padding-left: 27rem;
 			font-size: 17px;
-
 }
 		@include mq(large){
 			padding-left: 21rem;
 			font-size: 35px;
-
 }
 		@media(min-width: 1000px){
 			padding-left: 9rem;
@@ -220,7 +212,6 @@ body img{
 		height: 2.917rem;
 		width: 19%;
 		margin-left: 1rem;
-		
 }
 	@include mq(large){
 		height: 2rem;
@@ -235,25 +226,21 @@ body img{
 .colorChoice1:checked +label{
 	border: solid;
 	border-color: yellow;
-	
 }
 
 .colorChoice2:checked +label{
 	border: solid;
 	border-color: yellow;
-	
 }
 
 .colorChoice3:checked +label{
 	border: solid;
 	border-color: yellow;
-	
 }
 
 .colorChoice4:checked +label{
 	border: solid;
 	border-color: yellow;
-	
 }
 
 #color input {
@@ -273,8 +260,6 @@ body img{
 	background-color: blue;
 }
 
-
-
 form{
 	@include mq(small){
 		display: flex;
@@ -288,17 +273,18 @@ form{
 		width:  7.083rem; 
 		margin-right: 5px;
 		margin-bottom: 10px;
-		
 }
 	@include mq(medium){
 		width:  120px; 
 		margin-right: 40px;
 		margin-bottom: 15px;
 }
+media(min-width: 400px){
+		width: 180px;
+}
 	@media(min-width: 550px){
 		width: 190px;
-	
-	}
+}
 	@include mq(large){
 		width: 200px;
 		height: 30px;
@@ -311,9 +297,8 @@ form{
  		margin-right: auto;
  		margin-bottom: 20px;
  		height: 50px;
-
- 	}
- }
+	}
+}
 
 #email{
 	@include mq(small){
@@ -323,6 +308,9 @@ form{
 } 
 	@include mq(medium){
 		width: 120px; 
+}
+media(min-width: 400px){
+		width: 180px;
 }
 	@media(min-width: 550px){
 		width: 190px;
@@ -338,9 +326,7 @@ form{
  		margin-right: auto;
  		margin-bottom: 20px;
  		height: 50px;
-
- 		
- 	}
+	}
 }
 
 #address{
@@ -348,19 +334,17 @@ form{
 		width: 85px; 
 		margin-right: 8px;
 		margin-bottom: 10px;
-		
 }
 	@include mq(medium){
 		width: 120px; 
 		margin-right: 40px;
 		margin-bottom: 15px;
-		
 }
 	@media(min-width: 550px){
-		width: 180px;
+		width: 160px;
 }
 	@include mq(large){
-		width: 200px; 
+		width: 170px; 
 		height: 30px;
 		margin-bottom: 20px;
 }
@@ -376,7 +360,6 @@ form{
 #address2{
 	@include mq(small){
 		width: 85px; 
-		
 }
 	@include mq(medium){
 		width: 120px;  
@@ -385,9 +368,8 @@ form{
 		width: 180px;
 }
 	@include mq(large){
-		width: 200px; 
+		width: 170px; 
 		height: 30px;
-		
 }
 	@media(min-width: 1000px){
  		display: flex;
@@ -402,11 +384,9 @@ form{
 		 width: 60px; 
 		 margin-right: 8px;
 		 margin-bottom: 15px;
-		
 } 
 		@include mq(medium){
 		 width: 95px; 
-		
 } 
 	@media(min-width: 550px){
 		width: 120px;
@@ -423,7 +403,6 @@ form{
 		margin-right: 50px;
 		margin-left: 10px;
 		height: 50px;
-	
 	}
 }
 	
@@ -431,7 +410,6 @@ form{
 	@include mq(small){
 		 width: 60px; 
 		 margin-right: 8px;
-		 
 } 
 		@include mq(medium){
 		 width: 95px; 
@@ -450,7 +428,6 @@ form{
 		width: 80px;
 		margin-right: 50px;
 		height: 50px;
-	
 	}
 }
 
@@ -473,7 +450,6 @@ form{
 		width: 80px;
 		margin-right: 5px;
 		height: 50px;
-	
 	}
 }
 
@@ -484,16 +460,12 @@ select{
 }
 	@include mq(large){
 		height: 30px;
-		
-
 }
 	@media(min-width: 1000px){
-		display: flex;
-		width: 360px;
+		width: 410px;
 		margin-left: 10px;
 		margin-right: 10px;
 		height: 60px;
-	
 	}
 }
 
@@ -515,18 +487,14 @@ h3{
 		h3{
 			width: 75%;
 			margin-left: 5px;
-		
 		}
-	
 	}
-
 } 
 
 #orderSummary li:nth-of-type(2){
 		@include mq(small){
 			display: flex;
 			flex-direction: row;
-		
 }
 
 h3{
@@ -537,8 +505,7 @@ h3{
 		h3{
 			width: 75%;
 			margin-left: 5px;
-
-		} 
+} 
 		}
 }
 
@@ -546,18 +513,17 @@ h3{
 		@include mq(small){
 			display: flex;
 			flex-direction: row;
-		
-}
+		}
 
 h3{
 	width: 85%;
 }
 	@media(min-width: 1000px){
 		h3{
+			
 			width: 75%;
 			margin-left: 5px;
-
-		} 
+} 
 		}
 }
 
@@ -574,7 +540,7 @@ h3{
 }
 
 #orderSummary li:nth-of-type(2){
-	color: grey;
+	color: midnightblue;
 }
 
 #shipCity, #shipState, #shipZip{
@@ -585,7 +551,7 @@ h3{
 	@include mq(small){
 		font-size: 1.167em;
 		text-align: center;
-		background-color: green;
+		background-color: mediumspringgreen;
     	width: 80%;
     	height: 50px;
     	@include brs(2px,2px,2px,2px);
@@ -593,8 +559,6 @@ h3{
     	justify-content: center;
     	margin-left: 30px;
     	margin-top: 10px;
-
-	
 }
 	@include mq(medium){
 		font-size: 1.538em;
@@ -609,41 +573,37 @@ h3{
 		height: 2.5rem;
 		align-items: flex-end;
 		margin-left: 30px;
-		
-	}
+		}
 }
 
 .error{
 	color: red;
 }
 
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
 }
 
-/* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%; 
 }
 
 .modal-content li:nth-of-type(2){
 	display: flex;
 	flex-direction: row;
-
 }
 
 .modal-content li:nth-of-type(1){
@@ -654,7 +614,6 @@ h3{
 .modal-content li:nth-of-type(3){
 	display: flex;
 	flex-direction: row;
-
 }
 
 .modal-content h3{

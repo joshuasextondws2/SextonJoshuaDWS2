@@ -16,7 +16,7 @@
   <!-- Modal content -->
   			<section class="modal-content">
     	
-    			<h2>Order Completed</h2>
+    			<h2 id="orderComplete">Order Completed</h2>
     	
     			<h2>Order Summary</h2>
 				<ul>
@@ -113,9 +113,9 @@
     				<input type="text" id="zip" onInput="shipInfoZip()" required/>
   				</div>
   				<div class="control-group">
+    				<label for="countrySelection">Country</label>
     				<input type="hidden" id="country"/>
-    				<label for="countryInput">Country</label>
-    					<select id="countryInput" name="country_choice">
+    					<select id="countrySelection" name="countryChoice">
     						<option value="se">Please select a country</option>
 							<option value="AF">Afghanistan</option>
 							<option value="AX">Åland Islands</option>

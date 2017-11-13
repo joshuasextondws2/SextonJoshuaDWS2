@@ -275,12 +275,9 @@ form{
 		margin-bottom: 10px;
 }
 	@include mq(medium){
-		width:  120px; 
+		width:  105px; 
 		margin-right: 40px;
 		margin-bottom: 15px;
-}
-media(min-width: 400px){
-		width: 180px;
 }
 	@media(min-width: 550px){
 		width: 190px;
@@ -307,11 +304,9 @@ media(min-width: 400px){
 		margin-bottom: 10px;
 } 
 	@include mq(medium){
-		width: 120px; 
+		width: 105px; 
 }
-media(min-width: 400px){
-		width: 180px;
-}
+
 	@media(min-width: 550px){
 		width: 190px;
 }
@@ -336,7 +331,7 @@ media(min-width: 400px){
 		margin-bottom: 10px;
 }
 	@include mq(medium){
-		width: 120px; 
+		width: 105px; 
 		margin-right: 40px;
 		margin-bottom: 15px;
 }
@@ -362,7 +357,7 @@ media(min-width: 400px){
 		width: 85px; 
 }
 	@include mq(medium){
-		width: 120px;  
+		width: 105px;  
 }
 	@media(min-width: 550px){
 		width: 180px;
@@ -386,7 +381,7 @@ media(min-width: 400px){
 		 margin-bottom: 15px;
 } 
 		@include mq(medium){
-		 width: 95px; 
+		 width: 85px; 
 } 
 	@media(min-width: 550px){
 		width: 120px;
@@ -412,7 +407,7 @@ media(min-width: 400px){
 		 margin-right: 8px;
 } 
 		@include mq(medium){
-		 width: 95px; 
+		 width: 85px; 
 } 
 	@media(min-width: 550px){
 		width: 120px;
@@ -436,7 +431,7 @@ media(min-width: 400px){
 		 width: 60px;
 } 
 	@include mq(medium){
-		 width: 95px; 
+		 width: 85px; 
 } 
 	@media(min-width: 550px){
 		width: 120px; 
@@ -629,13 +624,25 @@ h3{
 	height: 30%;
 	}
 	@include mq(large){
-	margin-left: 60px;
+	margin-left: 140px;
 	margin-top: 30px;
 	width: 40%;
 	height: 40%;
+	}
+	@media(min-width: 1000px){
+		margin-left: 200px;
 	}
 }
 
 #modalShipCity, #modalShipState, #modalShipZip{
 	display: inline;
 } 
+
+#orderComplete{
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	@media(min-width: 1000px){
+		width: 50%;
+	}
+}

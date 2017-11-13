@@ -253,7 +253,7 @@ li {
 
 @media (min-width: 400px) {
   #fullName {
-    width: 120px;
+    width: 105px;
     margin-right: 40px;
     margin-bottom: 15px; } }
 
@@ -284,7 +284,7 @@ li {
 
 @media (min-width: 400px) {
   #email {
-    width: 120px; } }
+    width: 105px; } }
 
 @media (min-width: 550px) {
   #email {
@@ -312,7 +312,7 @@ li {
 
 @media (min-width: 400px) {
   #address {
-    width: 120px;
+    width: 105px;
     margin-right: 40px;
     margin-bottom: 15px; } }
 
@@ -340,7 +340,7 @@ li {
 
 @media (min-width: 400px) {
   #address2 {
-    width: 120px; } }
+    width: 105px; } }
 
 @media (min-width: 550px) {
   #address2 {
@@ -366,7 +366,7 @@ li {
 
 @media (min-width: 400px) {
   #city {
-    width: 95px; } }
+    width: 85px; } }
 
 @media (min-width: 550px) {
   #city {
@@ -394,7 +394,7 @@ li {
 
 @media (min-width: 400px) {
   #state {
-    width: 95px; } }
+    width: 85px; } }
 
 @media (min-width: 550px) {
   #state {
@@ -419,7 +419,7 @@ li {
 
 @media (min-width: 400px) {
   #zip {
-    width: 95px; } }
+    width: 85px; } }
 
 @media (min-width: 550px) {
   #zip {
@@ -591,10 +591,21 @@ li {
       height: 30%; } }
   @media (min-width: 700px) {
     .modal-content img {
-      margin-left: 60px;
+      margin-left: 140px;
       margin-top: 30px;
       width: 40%;
       height: 40%; } }
+  @media (min-width: 1000px) {
+    .modal-content img {
+      margin-left: 200px; } }
 
 #modalShipCity, #modalShipState, #modalShipZip {
   display: inline; }
+
+#orderComplete {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%; }
+  @media (min-width: 1000px) {
+    #orderComplete {
+      width: 50%; } }
